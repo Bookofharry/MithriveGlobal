@@ -32,6 +32,7 @@ export default function Contact() {
       <Hero 
         title="Contact Us"
         subtitle="Get in touch to learn how we can help strengthen your institution."
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782507293/IMG_3197_qtdpae.heic"
       />
 
       <section className="py-24">

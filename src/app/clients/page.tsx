@@ -13,6 +13,7 @@ export default function Clients() {
       <Hero 
         title="Our Clients"
         subtitle="A diverse portfolio of public and private sector institutions served across Nigeria and beyond."
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782506991/IMG_8067_yf75il.jpg"
       />
 
       <section className="py-24 bg-white">
