@@ -9,6 +9,26 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Mithrive Global Limited",
+            image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx",
+            "@id": "https://mithriveglobal.com",
+            url: "https://mithriveglobal.com",
+            telephone: "+2340000000000",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Enterprise Technology Center",
+              addressLocality: "Abuja",
+              addressCountry: "NG"
+            }
+          })
+        }}
+      />
       <Hero 
         title="Contact Us"
         subtitle="Get in touch to learn how we can help strengthen your institution."

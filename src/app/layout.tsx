@@ -5,6 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mithriveglobal.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     template: '%s | Mithrive Global Limited',
     default: 'Mithrive Global Limited | Consulting & Capacity Development',
@@ -43,6 +47,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased flex flex-col min-h-screen`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Mithrive Global Limited",
+              url: "https://mithriveglobal.com",
+              logo: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx",
+              description: "A performance-focused consulting and capacity development firm operating across Africa.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: "hello@mithriveglobal.com"
+              }
+            })
+          }}
+        />
         <Navbar />
         <main className="flex-grow">
           {children}
