@@ -1,0 +1,87 @@
+import { Metadata } from "next";
+import Hero from "@/components/Hero";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn more about Mithrive Global Limited and our mission to unlock growth capacity through transformative leadership frameworks.",
+};
+
+
+export default function About() {
+  return (
+    <div className="flex flex-col w-full">
+      <Hero 
+        title="About Mithrive Global"
+        subtitle="Unlocking growth capacity by integrating systems optimization with transformative leadership frameworks."
+      />
+
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-brand-navy mb-6">Our Story</h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Mithrive Global is a performance-focused consulting and capacity development firm committed to strengthening institutions, optimizing systems, and delivering measurable development impact across Africa. 
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                The firm helps organizations transition from potential to performance, building institutions that work — not just exist. We believe that growth should be engineered, not accidental.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 shadow-sm">
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-brand-lime mb-3 uppercase tracking-wider text-sm">Mission</h3>
+                <p className="text-xl text-brand-navy font-medium leading-relaxed">
+                  To unlock growth capacity by integrating systems optimization with transformative leadership frameworks.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-brand-lime mb-3 uppercase tracking-wider text-sm">Vision</h3>
+                <p className="text-xl text-brand-navy font-medium leading-relaxed">
+                  To become the leading authority in institutional performance and systems strengthening across the African continent.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-brand-navy text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-6">The Problem We Solve — The Execution Gap</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Across Africa, organizations fail to scale not due to a lack of vision, but due to structural friction. The gap between funding and impact is driven by three recurring problems:
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/5 border border-white/10 p-8 rounded-xl backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-brand-lime mb-4">Inefficiency</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Wasted resources from poor systems design and a lack of optimization in operational frameworks.
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-xl backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-brand-lime mb-4">Barriers to Access</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Structural blockages preventing execution and scaling of successful initiatives.
+              </p>
+            </div>
+            <div className="bg-white/5 border border-white/10 p-8 rounded-xl backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-brand-lime mb-4">Unmeasured Potential</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Value lost from a lack of evidence-based planning and rigorous results monitoring.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <p className="text-2xl font-medium italic text-brand-lime">
+              Our Purpose: To eliminate friction through capacity alignment and engineered growth.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
