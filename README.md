@@ -1,38 +1,91 @@
-# MithriveGlobal
+# Mithrive Global Limited - Corporate Website
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Welcome to the official corporate website repository for **Mithrive Global Limited**, a performance-focused consulting and capacity development firm operating across Africa.
 
-## Getting Started
+This website is designed to be lightning-fast, highly optimized for search engines (SEO), and visually authoritative—comparable to top-tier global consulting firms.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Technology Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is built using modern, production-ready web technologies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **UI Library:** [React 18](https://react.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Image Hosting & Optimization:** [Cloudinary](https://cloudinary.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Key Features & Optimizations
 
-To learn more about Next.js, take a look at the following resources:
+- **Server-Side Rendering (SSR) & Static Site Generation (SSG):** Leverages Next.js App router for incredibly fast page loads.
+- **Advanced SEO Implementation:** 
+  - Dynamic `sitemap.xml` and `robots.txt` generation.
+  - JSON-LD Structured Data (Organization, LocalBusiness, Service) injected into layouts for AI Search and Google Rich Snippets.
+  - Dynamic Canonical URLs and Open Graph (OG) social sharing metadata.
+- **Image Optimization:** All images are hosted on Cloudinary and pulled through Next.js `<Image />` components. The `f_auto,q_auto` Cloudinary flags are utilized to seamlessly convert `.heic` formats from iOS devices into highly compressed WebP/AVIF formats automatically based on the user's browser.
+- **Resilience:** Custom Global Error boundaries (`error.tsx`) and 404 pages (`not-found.tsx`) ensure a robust user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💻 Local Development Guide
 
-## Deploy on Vercel
+If you are a developer taking over or updating this project, follow these steps to run the site locally:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Bookofharry/MithriveGlobal.git
+   cd MithriveGlobal
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the site:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser. The page will auto-update as you edit files in the `src/app/` directory.
+
+---
+
+## 🌍 Hosting & Deployment Guide
+
+This application is extremely lightweight and can be deployed easily. 
+
+### Option A: Vercel (Recommended)
+Because this is a Next.js application, [Vercel](https://vercel.com/) (the creators of Next.js) is the best hosting platform. It requires zero configuration.
+1. Create a free account at [Vercel.com](https://vercel.com/).
+2. Click **Add New... > Project**.
+3. Import your GitHub repository (`Bookofharry/MithriveGlobal`).
+4. Keep all default settings (Framework Preset: Next.js).
+5. Click **Deploy**. Vercel will automatically build and host the site, and update it every time you push to the `main` branch.
+
+### Option B: Netlify
+1. Create an account at [Netlify.com](https://www.netlify.com/).
+2. Click **Add new site > Import an existing project**.
+3. Connect your GitHub and select the repository.
+4. Netlify will auto-detect Next.js. Click **Deploy Site**.
+
+### Option C: Custom Server / VPS (AWS, DigitalOcean)
+If you need to host this on a traditional Node.js server:
+1. Pull the code to the server.
+2. Run `npm install` to get dependencies.
+3. Run `npm run build` to generate the highly optimized production build.
+4. Run `npm run start` to start the Node server on port 3000. 
+*(Note: You will want to use a process manager like `pm2` and a reverse proxy like Nginx).*
+
+---
+
+## 📂 Project Structure
+
+- `src/app/` - The core routing directory. Every folder (e.g., `/about`, `/services`) corresponds to a URL path.
+- `src/app/layout.tsx` - The global layout containing the Navbar, Footer, and global SEO metadata.
+- `src/components/` - Reusable UI components like the `Hero`, `Card`, and `ClientLogoGrid`.
+- `next.config.mjs` - Next.js configuration. Currently configured to authorize `res.cloudinary.com` as a trusted remote image source.
