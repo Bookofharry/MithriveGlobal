@@ -24,4 +24,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .animate-bg-fade {
+    animation: bgFadeIn 1.2s ease-in-out forwards;
+  }
+}
+
+@keyframes bgFadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
 }

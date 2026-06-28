@@ -22,12 +22,12 @@ export default function Home() {
       {/* About Snippet */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-brand-navy mb-6">About Mithrive Global</h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-            We are committed to strengthening institutions, optimizing systems, and delivering measurable development impact. The firm helps organizations transition from potential to performance, building institutions that work — not just exist.
+          <h2 className="text-3xl font-bold text-brand-navy mb-8">About Mithrive Global</h2>
+          <p className="text-2xl font-medium text-brand-navy italic mb-8 max-w-4xl mx-auto leading-snug">
+            &quot;Strong economies are built on strong institutions. Strong institutions are built on optimized people and systems.&quot;
           </p>
-          <p className="text-2xl font-medium text-brand-navy italic">
-            &quot;Growth should be engineered — not accidental.&quot;
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Mithrive Global is a performance-focused consulting and capacity development firm committed to strengthening institutions, optimizing systems, and delivering measurable development impact across Africa. We are dedicated to helping organizations transition from potential to performance, building institutions that work, not just exist.
           </p>
         </div>
       </section>

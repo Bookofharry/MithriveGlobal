@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Our Team",
@@ -11,39 +12,51 @@ const coreTeam = [
     name: "Mohammed Ibrahim M.",
     role: "Director of Programs",
     credentials: "Harvard-trained, SURCON member.",
-    expertise: "Geospatial data & strategic development."
+    expertise: "Geospatial data & strategic development.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556321/image26_gflbah.jpg"
   },
   {
     name: "Karl Klausewitz",
     role: "Int'l Technical Support (Strategy)",
     credentials: "International strategy advisory.",
-    expertise: "Strategic planning and execution."
+    expertise: "Strategic planning and execution.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556565/image17_fvsttx.jpg"
   },
   {
     name: "Tejaswini Hiremath",
     role: "Int'l Technical Support (Community Dev.)",
     credentials: "Community development advisory.",
-    expertise: "Community empowerment and engagement."
+    expertise: "Community empowerment and engagement.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556608/image25_if8qsm.jpg"
   },
   {
-    name: "Mrs. Rosemary Okonkwo",
-    role: "Global Human Resources Partner",
-    credentials: "HR systems & people operations.",
-    expertise: "Human capital management."
+    name: "Chinonso F. Aninwodo",
+    role: "Head, Corporate Branding & Marketing",
+    credentials: "Nearly a decade in branding & multimedia communications.",
+    expertise: "Brand strategy, digital communications & market positioning.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782558410/image23_kxjooi.jpg"
   },
   {
     name: "Fatima Binta M.",
     role: "Int'l Research & Analyst Partner",
     credentials: "Research intelligence & analytics.",
-    expertise: "Data-driven research methodologies."
+    expertise: "Data-driven research methodologies.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556665/image28_kcops5.jpg"
+  },
+  {
+    name: "Mrs. Agada Lucy",
+    role: "Head, Human Capital & Organizational Development",
+    credentials: "Administrative & operational roles at Kashoco Global & RoyalKings Court.",
+    expertise: "Talent management, organizational effectiveness, and workforce development.",
+    image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782558393/image20_murzsu.jpg"
   }
 ];
 
 const globalFacilitators = [
   {
-    name: "Mohammed Ibrahim M.",
-    credentials: "Harvard-trained, SURCON member",
-    expertise: "Geospatial data & strategic development for high-performance institutional systems."
+    name: "Mrs. Rosemary Okonkwo",
+    credentials: "HR systems & people operations.",
+    expertise: "Human capital management."
   },
   {
     name: "Dr. Abubakar Rufai",
@@ -78,6 +91,7 @@ export default function Team() {
       <Hero 
         title="Our Team"
         subtitle="Meet the experts driving institutional performance and systems strengthening across Africa."
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559540/IMG_2446_yyx3vj.jpg"
       />
 
       <section className="py-24">
@@ -90,9 +104,15 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreTeam.map((member, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="h-48 bg-gray-200 w-full flex items-center justify-center text-gray-400 uppercase tracking-widest font-semibold">
-                  Photo
-                </div>
+                {member.image ? (
+                  <div className="h-72 w-full relative bg-gray-50 border-b border-gray-100">
+                    <Image src={member.image} alt={member.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                ) : (
+                  <div className="h-72 bg-gray-50 w-full relative border-b border-gray-100 flex items-center justify-center">
+                    <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" fill className="object-contain p-8 opacity-20" />
+                  </div>
+                )}
                 <div className="p-8">
                   <h3 className="text-xl font-bold text-brand-navy mb-1">{member.name}</h3>
                   <p className="text-brand-lime font-medium text-sm mb-4">{member.role}</p>
@@ -114,9 +134,15 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {globalFacilitators.map((fac, idx) => (
               <div key={idx} className="flex flex-col sm:flex-row bg-gray-50 rounded-xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <div className="sm:w-1/3 bg-gray-200 min-h-[160px] flex items-center justify-center text-gray-400 font-semibold uppercase text-xs tracking-widest">
-                  Photo
-                </div>
+                {fac.image ? (
+                  <div className="sm:w-1/3 min-h-[200px] relative bg-gray-50 border-r border-gray-100">
+                    <Image src={fac.image} alt={fac.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                ) : (
+                  <div className="sm:w-1/3 bg-gray-50 min-h-[200px] relative flex items-center justify-center border-r border-gray-100">
+                    <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" fill className="object-contain p-6 opacity-20" />
+                  </div>
+                )}
                 <div className="sm:w-2/3 p-6 flex flex-col justify-center">
                   <h3 className="text-lg font-bold text-brand-navy mb-2">{fac.name}</h3>
                   <p className="text-xs text-brand-lime font-semibold uppercase tracking-wider mb-3">{fac.credentials}</p>

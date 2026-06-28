@@ -36,6 +36,7 @@ export default function Work() {
       <Hero 
         title="Our Work"
         subtitle="Project highlights demonstrating our commitment to measurable impact."
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559190/Copy_of_20240716_121626_qa8uty.jpg"
       />
 
       <section className="py-24">

@@ -18,14 +18,14 @@ export default function Hero({
   return (
     <div className="relative bg-brand-navy overflow-hidden">
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-      <div 
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-50"
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0 opacity-0 animate-bg-fade"
         style={{ backgroundImage: `url(${backgroundImage || ''})` }}
       />
-      
+
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
-      
+
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-40 flex flex-col justify-center">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
@@ -38,7 +38,7 @@ export default function Hero({
           )}
           <div className="mt-10 flex gap-4 flex-wrap">
             {primaryCta && (
-              <Link 
+              <Link
                 href={primaryCta.href}
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded bg-brand-lime text-brand-navy hover:bg-white hover:text-brand-navy transition-all duration-300 shadow-lg transform hover:-translate-y-1"
               >
@@ -46,7 +46,7 @@ export default function Hero({
               </Link>
             )}
             {secondaryCta && (
-              <Link 
+              <Link
                 href={secondaryCta.href}
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded border-2 border-white text-white hover:bg-white hover:text-brand-navy transition-all duration-300"
               >

@@ -13,6 +13,7 @@ export default function SocialImpact() {
       <Hero 
         title="Social Impact"
         subtitle="Empowering communities and fostering sustainable growth across Nigeria."
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559312/IMG_1893_yssgye.jpg"
       />
 
       <section className="py-24 bg-white">
