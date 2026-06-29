@@ -1,15 +1,63 @@
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn more about Mithrive Global Limited and our mission to unlock growth capacity through transformative leadership frameworks.",
+  title: "About Us — Institutional Strengthening Firm",
+  description: "Learn about Mithrive Global's mission to eliminate the Execution Gap. Performance consulting, capacity development & systems optimization across Africa.",
+  alternates: {
+    canonical: "https://mithriveglobal.com/about",
+  },
+  openGraph: {
+    title: "About Mithrive Global — Institutional Strengthening Firm",
+    description: "Performance consulting, capacity development & systems optimization. Eliminating the Execution Gap across institutions in Nigeria and Africa.",
+    url: "https://mithriveglobal.com/about",
+  },
 };
 
+const faqs = [
+  {
+    question: "What is the Execution Gap?",
+    answer: "The Execution Gap is the structural disconnect between an organization's vision and its ability to deliver results. Across Africa, institutions often fail to scale not because of a lack of vision or funding, but due to inefficiency, barriers to access, and unmeasured potential. Mithrive Global's interventions are designed to close this gap through capacity alignment and engineered growth."
+  },
+  {
+    question: "How does Mithrive Global help institutions perform better?",
+    answer: "Mithrive Global applies a comprehensive, evidence-based approach combining organizational development, results-based management, and data intelligence. Through our proprietary 6-Step Mithrive Path — Diagnose, Analyze, Redesign, Align, Deploy, Measure — we engineer systems that transition organizations from potential to performance."
+  },
+  {
+    question: "Where does Mithrive Global operate?",
+    answer: "Mithrive Global is headquartered in Abuja, Nigeria, and operates across the African continent. We have delivered capacity development and institutional strengthening projects for federal ministries, state governments, private sector organizations, development agencies, and NGOs across Nigeria and beyond."
+  },
+  {
+    question: "What makes Mithrive Global different from other consulting firms?",
+    answer: "Unlike generalist consulting firms, Mithrive Global is purpose-built for institutional performance in the African context. Our team includes Harvard-trained professionals, SURCON and ICAN members, Oracle and Google certified experts, and PhD holders. We combine deep domain expertise with proprietary frameworks like the Execution Gap analysis and the Performance Blueprint, delivering measurable, sustainable impact."
+  }
+];
 
 export default function About() {
   return (
     <div className="flex flex-col w-full">
+      <BreadcrumbSchema items={[{ name: "About", href: "/about" }]} />
+      
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <Hero 
         title="About Mithrive Global"
         subtitle="Unlocking growth capacity by integrating systems optimization with transformative leadership frameworks."
@@ -80,6 +128,21 @@ export default function About() {
             <p className="text-2xl font-medium italic text-brand-lime">
               Our Purpose: To eliminate friction through capacity alignment and engineered growth.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="border-b border-gray-200 pb-8">
+                <h3 className="text-xl font-bold text-brand-navy mb-4">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

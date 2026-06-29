@@ -1,9 +1,18 @@
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "Get in touch to learn how we can help strengthen your institution.",
+  title: "Contact Us — Get in Touch Abuja Nigeria",
+  description: "Reach Mithrive Global at Enterprise Technology Center, Abuja. Partner with us for organizational development, M&E, and institutional consulting.",
+  alternates: {
+    canonical: "https://mithriveglobal.com/contact",
+  },
+  openGraph: {
+    title: "Contact Mithrive Global — Abuja, Nigeria",
+    description: "Get in touch to learn how Mithrive Global can help strengthen your institution. Office in Abuja, Nigeria.",
+    url: "https://mithriveglobal.com/contact",
+  },
 };
 
 export default function Contact() {
@@ -93,60 +102,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-bold text-brand-navy mb-8">Send a Message</h2>
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
-                    placeholder="John Doe"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">Organization</label>
-                  <input 
-                    type="text" 
-                    id="organization" 
-                    name="organization" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
-                    placeholder="Your Company"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
-                    placeholder="john@example.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all resize-none"
-                    placeholder="How can we help you?"
-                    required
-                  ></textarea>
-                </div>
-                <button 
-                  type="button"
-                  className="w-full py-4 px-6 rounded-lg bg-brand-navy text-white font-bold text-lg hover:bg-brand-lime hover:text-brand-navy transition-all duration-300 shadow-md"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

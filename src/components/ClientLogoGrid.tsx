@@ -39,7 +39,7 @@ export default function ClientLogoGrid({ limit }: { limit?: number }) {
         >
           {client.logo ? (
             <div className="relative w-full h-full p-6 flex items-center justify-center">
-              <Image src={client.logo} alt={client.name} fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-300" />
+              <Image src={client.logo} alt={`${client.name} logo - Mithrive Global client`} fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-300" />
             </div>
           ) : (
             <span className="font-semibold text-sm md:text-base text-gray-700 px-4 group-hover:text-brand-navy transition-colors">{client.name}</span>

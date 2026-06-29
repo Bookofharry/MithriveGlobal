@@ -1,7 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import Hero from "@/components/Hero";
+import ServiceTabs from "@/components/ServiceTabs";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const services = [
   {
@@ -58,12 +57,53 @@ const services = [
   }
 ];
 
-export default function Services() {
-  const [activeTab, setActiveTab] = useState(services[0].id);
-  const activeService = services.find(s => s.id === activeTab) || services[0];
+const faqs = [
+  {
+    question: "What is organizational development consulting?",
+    answer: "Organizational development consulting involves diagnosing institutional structures, optimizing governance and workforce alignment, and cultivating high-performance cultures. At Mithrive Global, we go beyond surface-level assessments to engineer systems that eliminate friction and drive measurable capacity improvement across African institutions."
+  },
+  {
+    question: "What is results-based management (RBM)?",
+    answer: "Results-Based Management is a strategic management approach where organizations define expected results, monitor progress through M&E systems, and adjust strategies based on evidence. Mithrive Global implements RBM frameworks that translate strategy into measurable, accountable outcomes for development agencies, government ministries, and private sector institutions."
+  },
+  {
+    question: "How can GIS and geospatial analytics improve institutional performance?",
+    answer: "GIS and geospatial analytics enable institutions to visualize spatial data, optimize resource allocation across territories, and make evidence-based planning decisions. Mithrive Global applies GIS consulting to support urban planning, service delivery optimization, and strategic development across Nigeria and Africa."
+  },
+  {
+    question: "What is M&E consulting and why is it important?",
+    answer: "Monitoring & Evaluation (M&E) consulting establishes the systems and frameworks needed to continuously track project progress, assess outcomes, and verify impact. For development programs, donor-funded initiatives, and institutional projects, M&E is essential for accountability, learning, and demonstrating return on investment."
+  },
+  {
+    question: "How does Mithrive Global differ from other consulting firms in Nigeria?",
+    answer: "Mithrive Global is uniquely positioned as a performance-focused firm that combines organizational development, results-based management, and data intelligence into a single integrated approach. Our proprietary frameworks — the Execution Gap analysis and the 6-Step Mithrive Path — are designed specifically for African institutional contexts, backed by Harvard-trained, SURCON and ICAN certified experts."
+  }
+];
 
+export default function Services() {
   return (
     <div className="flex flex-col w-full min-h-screen bg-gray-50">
+      <BreadcrumbSchema items={[{ name: "Services", href: "/services" }]} />
+      
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <Hero 
         title="Our Service Portfolio"
         subtitle="We design full performance ecosystems anchored in Purpose-Led Growth, Capacity & System Architecture."
@@ -72,70 +112,21 @@ export default function Services() {
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-col lg:flex-row gap-12">
-            
-            {/* Tabs Sidebar */}
-            <div className="lg:w-1/3">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden sticky top-28">
-                {services.map((service) => (
-                  <button
-                    key={service.id}
-                    onClick={() => setActiveTab(service.id)}
-                    className={`w-full text-left px-6 py-6 border-l-4 transition-all duration-300 ${
-                      activeTab === service.id 
-                        ? "border-brand-lime bg-brand-navy/5" 
-                        : "border-transparent hover:bg-gray-50"
-                    }`}
-                  >
-                    <h3 className={`text-xl font-bold mb-2 ${
-                      activeTab === service.id ? "text-brand-lime" : "text-brand-navy"
-                    }`}>
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </button>
-                ))}
-              </div>
-            </div>
+          <ServiceTabs services={services} />
+        </div>
+      </section>
 
-            {/* Content Area */}
-            <div className="lg:w-2/3">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-12 min-h-full">
-                <h2 className="text-3xl font-bold text-brand-navy mb-6">{activeService.title}</h2>
-                <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-                  {activeService.details}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="space-y-10">
-                    {activeService.subItems.map((item, idx) => (
-                      <div key={idx}>
-                        <h4 className="text-xl font-bold text-brand-lime mb-3">{item.title}</h4>
-                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div>
-                    <div className="bg-brand-navy rounded-xl p-8 text-white sticky top-28">
-                      <h3 className="text-2xl font-bold text-brand-lime mb-6">Key Outcomes</h3>
-                      <ul className="space-y-4">
-                        {activeService.outcomes.map((outcome, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-brand-lime mr-3 mt-1">—</span>
-                            <span className="text-gray-200 leading-relaxed">{outcome}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+      {/* FAQ Section */}
+      <section className="py-24 bg-white border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-brand-navy mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="border-b border-gray-100 pb-8">
+                <h3 className="text-xl font-bold text-brand-navy mb-4">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
-            </div>
-            
+            ))}
           </div>
         </div>
       </section>
