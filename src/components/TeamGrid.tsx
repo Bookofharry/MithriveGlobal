@@ -61,33 +61,21 @@ export default function TeamGrid({ team }: { team: TeamMember[] }) {
       {selectedMember && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedMember(null)}>
           <div 
-            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
-              <button 
-                onClick={() => setSelectedMember(null)}
-                className="absolute top-4 right-4 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 z-10 transition-colors shadow-sm"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              
-              <div className="h-48 sm:h-64 relative w-full bg-brand-navy">
-                <Image 
-                  src={selectedMember.image || "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx"} 
-                  alt={selectedMember.name} 
-                  fill 
-                  className={`object-cover ${!selectedMember.image ? 'opacity-30 p-10 object-contain' : ''}`} 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent"></div>
-              </div>
-            </div>
+            <button 
+              onClick={() => setSelectedMember(null)}
+              className="absolute top-6 right-6 text-gray-400 hover:text-gray-800 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
             
-            <div className="p-8">
-              <h3 className="text-3xl font-bold text-brand-navy mb-2">{selectedMember.name}</h3>
-              <p className="text-brand-lime font-bold uppercase tracking-wide mb-6">{selectedMember.role}</p>
+            <div className="p-8 sm:p-10">
+              <h3 className="text-3xl font-bold text-brand-navy mb-2 pr-8">{selectedMember.name}</h3>
+              <p className="text-brand-lime font-bold uppercase tracking-wide mb-8">{selectedMember.role}</p>
               
               <div className="text-gray-600 leading-relaxed space-y-4">
                 {selectedMember.bio.split(". ").map((sentence, i, arr) => (
