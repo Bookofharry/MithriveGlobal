@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import { Metadata } from "next";
-import Image from "next/image";
+import TeamGrid from "@/components/TeamGrid";
 
 export const metadata: Metadata = {
   title: "Our Team - Expert Consultants Nigeria & Africa",
@@ -70,30 +70,7 @@ export default function Team() {
             <div className="w-24 h-1 bg-brand-lime mx-auto mt-6"></div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {coreTeam.map((member, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col sm:flex-row hover:shadow-lg transition-shadow duration-300">
-                {member.image ? (
-                  <div className="sm:w-2/5 min-h-[300px] relative bg-gray-50 border-r border-gray-100 flex-shrink-0">
-                    <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                ) : (
-                  <div className="sm:w-2/5 min-h-[300px] bg-gray-50 relative flex flex-shrink-0 items-center justify-center border-r border-gray-100">
-                    <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" fill className="object-contain p-8 opacity-20" />
-                  </div>
-                )}
-                <div className="p-8 sm:w-3/5 flex flex-col justify-center">
-                  <h3 className="text-2xl font-bold text-brand-navy mb-1">{member.name}</h3>
-                  <p className="text-brand-lime font-bold text-sm uppercase tracking-wide mb-4">{member.role}</p>
-                  <div className="text-gray-600 text-sm leading-relaxed space-y-4">
-                    {member.bio.split(". ").map((sentence, i, arr) => (
-                      <span key={i}>{sentence}{i !== arr.length - 1 ? ". " : ""}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamGrid team={coreTeam} />
         </div>
       </section>
     </div>
