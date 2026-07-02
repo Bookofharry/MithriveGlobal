@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeroProps {
   title: React.ReactNode;
@@ -18,10 +19,17 @@ export default function Hero({
   return (
     <div className="relative bg-brand-navy overflow-hidden">
       <div className="absolute inset-0 bg-black/40 z-10"></div>
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0 opacity-0 animate-bg-fade"
-        style={{ backgroundImage: `url(${backgroundImage || ''})` }}
-      />
+      {backgroundImage && (
+        <Image
+          src={backgroundImage}
+          alt="Background"
+          fill
+          priority
+          fetchPriority="high"
+          quality={90}
+          className="object-cover z-0 opacity-0 animate-bg-fade"
+        />
+      )}
 
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>

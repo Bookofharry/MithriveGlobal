@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="font-bold text-2xl text-brand-navy flex items-center gap-2">
-              <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" width={250} height={96} className="h-24 w-auto object-contain -ml-2" priority />
+              <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" width={250} height={96} className="h-24 w-auto object-contain -ml-2" priority fetchPriority="high" />
             </Link>
           </div>
           

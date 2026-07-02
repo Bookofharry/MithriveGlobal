@@ -52,6 +52,7 @@ export default function BrandedLoader() {
             height={100}
             className="object-contain drop-shadow-md"
             priority
+            fetchPriority="high"
           />
         </div>
       </div>
