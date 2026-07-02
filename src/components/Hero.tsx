@@ -28,7 +28,7 @@ export default function Hero({
     if (heroImages.length > 1) {
       const interval = setInterval(() => {
         setCurrentIdx((prev) => (prev + 1) % heroImages.length);
-      }, 6000); // 6 seconds per slide
+      }, 7000); // 7 seconds per slide
       return () => clearInterval(interval);
     }
   }, [heroImages.length]);
