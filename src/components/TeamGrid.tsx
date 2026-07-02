@@ -77,10 +77,8 @@ export default function TeamGrid({ team }: { team: TeamMember[] }) {
               <h3 className="text-3xl font-bold text-brand-navy mb-2 pr-8">{selectedMember.name}</h3>
               <p className="text-brand-lime font-bold uppercase tracking-wide mb-8">{selectedMember.role}</p>
               
-              <div className="text-gray-600 leading-relaxed space-y-4">
-                {selectedMember.bio.split(". ").map((sentence, i, arr) => (
-                  <p key={i}>{sentence}{i !== arr.length - 1 ? ". " : ""}</p>
-                ))}
+              <div className="text-gray-600 leading-relaxed text-lg">
+                <p>{selectedMember.bio}</p>
               </div>
             </div>
           </div>
