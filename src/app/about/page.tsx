@@ -61,7 +61,7 @@ export default function About() {
       <Hero 
         title="About Mithrive Global"
         subtitle="Unlocking growth capacity by integrating systems optimization with transformative leadership frameworks."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782506869/IMG_9298_fep9p1.heic"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030518/startupstockphotos-startup-593304_1920_nws8tc.jpg"
       />
 
       <section className="py-24 bg-white">
