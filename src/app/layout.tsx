@@ -103,6 +103,7 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import BrandedLoader from "@/components/BrandedLoader";
 
 export default function RootLayout({
   children,
@@ -148,6 +149,7 @@ export default function RootLayout({
             })
           }}
         />
+        <BrandedLoader />
         <Navbar />
         <main className="flex-grow">
           {children}
