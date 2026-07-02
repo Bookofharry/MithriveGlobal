@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 import Card from "@/components/Card";
 import ClientLogoGrid from "@/components/ClientLogoGrid";
+import LatestPublications from "@/components/LatestPublications";
+import OurInfluence from "@/components/OurInfluence";
 
 export const metadata: Metadata = {
   title: "Consulting & Capacity Development Firm Nigeria | Institutional Strengthening Africa",
@@ -85,6 +87,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <OurInfluence />
+      <LatestPublications />
 
       {/* Clients Section */}
       <section className="py-24 bg-white border-t border-gray-100">

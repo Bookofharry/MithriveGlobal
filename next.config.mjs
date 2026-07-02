@@ -3,6 +3,7 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

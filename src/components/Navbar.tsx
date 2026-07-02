@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Mithrive Path", href: "/path" },
     { name: "Our Work", href: "/work" },
+    { name: "Publications", href: "/publications" },
     { name: "Clients", href: "/clients" },
     { name: "Social Impact", href: "/social-impact" },
     { name: "Team", href: "/team" },
