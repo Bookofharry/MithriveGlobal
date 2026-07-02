@@ -33,7 +33,7 @@ export default function Home() {
         secondaryCta={{ label: "Contact Us", href: "/contact" }}
         images={[
           "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019430/geralt-business-10234773_1920_xczn7o.jpg",
-          "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019447/IMG_3854_t3bpwo.heic",
+          "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783019447/IMG_3854_t3bpwo.heic",
           "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019428/Capacity_building_ctvxad.png",
           "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019427/geralt-adults-3984852_1920_zi3pxa.jpg"
         ]}
