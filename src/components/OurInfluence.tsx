@@ -19,11 +19,11 @@ export default function OurInfluence() {
           Our Reach. Our Results.
         </p>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-8">
+        <div className="flex flex-wrap justify-center items-start gap-y-12 gap-x-6 sm:gap-x-10 md:gap-x-12">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center justify-center">
+            <div key={index} className="flex flex-col items-center justify-center w-[140px] sm:w-[160px] lg:w-auto flex-shrink-0">
               <span className="text-4xl lg:text-5xl font-extrabold text-brand-lime mb-3 drop-shadow-md">{stat.value}</span>
-              <span className="text-sm lg:text-base font-medium text-gray-300 max-w-[160px] leading-snug">{stat.label}</span>
+              <span className="text-sm lg:text-base font-medium text-gray-300 max-w-[140px] sm:max-w-[160px] leading-snug">{stat.label}</span>
             </div>
           ))}
         </div>
