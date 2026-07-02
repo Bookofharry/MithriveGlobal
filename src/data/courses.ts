@@ -24,7 +24,7 @@ export const courses: Course[] = [
     date: "August 15 - August 18, 2026",
     duration: "4 Days",
     price: "₦450,000",
-    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782559312/IMG_1893_yssgye.jpg",
+    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030197/tumisu-team-4817006_1920_snf3f5.jpg",
     brochureUrl: "#", // Placeholder
     highlights: ["Change Management", "Policy Implementation", "Stakeholder Engagement"]
   },
@@ -38,7 +38,7 @@ export const courses: Course[] = [
     date: "September 5 - September 7, 2026",
     duration: "3 Days",
     price: "₦250,000",
-    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782506744/IMG_7489_da2zgv.heic",
+    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030197/advogadoaguilar-right-4703925_1920_cfxytf.jpg",
     highlights: ["GIS Analytics", "Predictive Modeling", "M&E Dashboards"]
   },
   {
@@ -51,7 +51,7 @@ export const courses: Course[] = [
     date: "October 10 - October 14, 2026",
     duration: "5 Days",
     price: "₦350,000",
-    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782494380/PHOTO-2025-07-30-18-01-35_azjcbj.jpg",
+    imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030197/geralt-business-10209984_1920_hkw8iy.jpg",
     highlights: ["Logical Frameworks", "Impact Tracking", "Performance Audits"]
   }
 ];
