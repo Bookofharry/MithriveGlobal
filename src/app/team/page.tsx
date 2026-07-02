@@ -29,7 +29,7 @@ const coreTeam = [
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782558410/image23_kxjooi.jpg"
   },
   {
-    name: "Mrs. Agada Lucy",
+    name: "Agada Lucy",
     role: "Head, Human Capital & Organizational Development",
     bio: "Mrs. Agada Lucy is the Head of Human Capital & Organizational Development at Mithrive Global Ltd, where she leads initiatives focused on talent management, organizational effectiveness, workforce development, and administrative excellence. Since joining the firm, she has played a key role in strengthening internal systems and supporting the delivery of people-centered consulting solutions. Prior to Mithrive Global Ltd, she served in administrative and operational roles at Kashoco Global and RoyalKings Court, where she contributed to organizational efficiency and business operations. Her expertise spans human capital administration, organizational coordination, stakeholder engagement, and operational support, enabling sustainable organizational growth and high-performing teams.",
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782558393/image20_murzsu.jpg"
@@ -47,7 +47,7 @@ const coreTeam = [
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556565/image17_fvsttx.jpg"
   },
   {
-    name: "Fatima Binta M.",
+    name: "Mrs. Fatima Binta M.",
     role: "Head, Finance & Business Operations",
     bio: "Fatima Binta M. is the Head of Finance & Business Operations at Mithrive Global Ltd, where she provides strategic leadership in financial management, business operations, and organizational efficiency. Since joining the firm, she has played a vital role in strengthening operational systems and supporting sustainable business growth. Prior to Mithrive Global Ltd, she built several years of professional experience across the banking and telecommunications sectors, developing expertise in financial operations, customer relationship management, process improvement, and business administration. She is recognized for her analytical approach, operational discipline, and commitment to driving financial excellence and organizational performance.",
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556665/image28_kcops5.jpg"
