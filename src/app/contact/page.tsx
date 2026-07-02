@@ -41,7 +41,7 @@ export default function Contact() {
       <Hero 
         title="Contact Us"
         subtitle="Get in touch to learn how we can help strengthen your institution."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782507293/IMG_3197_qtdpae.heic"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030849/geralt-office-10300126_1920_fywbwn.jpg"
       />
 
       <section className="py-24">
