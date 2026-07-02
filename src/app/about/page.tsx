@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "What makes Mithrive Global different from other consulting firms?",
-    answer: "Unlike generalist consulting firms, Mithrive Global is purpose-built for institutional performance in the African context. Our team includes Harvard-trained professionals, SURCON and ICAN members, Oracle and Google certified experts, and PhD holders. We combine deep domain expertise with proprietary frameworks like the Execution Gap analysis and the Performance Blueprint, delivering measurable, sustainable impact."
+    answer: "Mithrive Global is purpose-built for institutional performance in the African context, enabling us to solve complex challenges with practical, sustainable solutions. By combining global best practices with deep local insight, we empower the society to build resilient, high-performing organizations. We don’t measure success by the reports we produce, but by the lasting capabilities, stronger institutions, and tangible impact we leave behind."
   }
 ];
 
