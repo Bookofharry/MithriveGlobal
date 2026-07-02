@@ -60,7 +60,7 @@ export default function Team() {
       <Hero 
         title="Our Team"
         subtitle="Meet the experts driving institutional performance and systems strengthening across Africa."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559540/IMG_2446_yyx3vj.jpg"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030062/mohamed_hassan-teamwork-3213924_1920_hjytta.jpg"
       />
 
       <section className="py-24">

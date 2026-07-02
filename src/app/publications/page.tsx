@@ -15,7 +15,7 @@ export default function PublicationsPage() {
       <Hero 
         title="Publications & Insights"
         subtitle="Explore our weekly articles, latest news, and deep-dive insights into our activities and industry trends across Africa."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559540/IMG_2446_yyx3vj.jpg"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030061/u_c48rf6ybx8-business-10186537_1920_zjbbbs.jpg"
       />
 
       <section className="py-24">

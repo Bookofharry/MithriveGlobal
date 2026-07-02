@@ -107,7 +107,7 @@ export default function Services() {
       <Hero 
         title="Our Service Portfolio"
         subtitle="We design full performance ecosystems anchored in Purpose-Led Growth, Capacity & System Architecture."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782506744/IMG_7489_da2zgv.heic"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030061/helpsg-business-1219868_1920_d9gty8.jpg"
       />
 
       <section className="py-24">

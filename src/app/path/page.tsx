@@ -109,7 +109,7 @@ export default function Path() {
       <Hero 
         title="The Mithrive Path"
         subtitle="A 6-step blueprint for engineering growth and strengthening systems."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559190/Copy_of_20240716_121626_qa8uty.jpg"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030061/geralt-presentation-10174584_1920_igqbhi.jpg"
       />
 
       <section className="py-24 bg-white relative">
