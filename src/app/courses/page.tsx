@@ -22,7 +22,7 @@ export default function CoursesPage() {
       <Hero 
         title="Capacity Building & Training"
         subtitle="Explore our cutting-edge courses designed to optimize leadership, strengthen governance, and build high-performance teams."
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782559312/IMG_1893_yssgye.jpg"
+        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1783030917/leejeongsoo-lecture-3986809_1920_r2mecu.jpg"
       />
 
       {/* Main Course Catalog */}
