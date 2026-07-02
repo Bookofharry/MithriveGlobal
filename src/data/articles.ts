@@ -15,7 +15,7 @@ export const articles: Article[] = [
     slug: "future-of-capacity-development",
     title: "The Future of Capacity Development in Africa",
     excerpt: "How emerging technologies and behavioral design are reshaping institutional strengthening across the continent.",
-    content: "The landscape of capacity development is evolving rapidly. Traditional training methods are giving way to continuous, technology-enabled learning ecosystems. At Mithrive Global, we have observed that organizations investing in holistic capacity architectures—rather than one-off training seminars—are experiencing a 40% higher retention rate in skills application.\n\nFurthermore, the integration of data intelligence into human resources empowers leaders to make predictive decisions regarding workforce optimization. As we look towards the future, behavioral design will play a critical role in ensuring that new skills translate into resilient, everyday institutional habits.",
+    content: "The landscape of capacity development is evolving rapidly. Traditional training methods are giving way to continuous, technology-enabled learning ecosystems. At Mithrive Global, we have observed that organizations investing in holistic capacity architecture - ather than one-off training seminar - re experiencing a 40% higher retention rate in skills application.\n\nFurthermore, the integration of data intelligence into human resources empowers leaders to make predictive decisions regarding workforce optimization. As we look towards the future, behavioral design will play a critical role in ensuring that new skills translate into resilient, everyday institutional habits.",
     date: "July 2, 2026",
     category: "Insights",
     imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782559312/IMG_1893_yssgye.jpg"
@@ -35,7 +35,7 @@ export const articles: Article[] = [
     slug: "results-based-management-success",
     title: "Why Results-Based Management Matters",
     excerpt: "Transitioning from output-focused tracking to real, measurable impact in public sector institutions.",
-    content: "For decades, many organizations measured success by how much they did—how many meetings were held, how many reports were generated—rather than what they achieved. Results-Based Management (RBM) flips this script entirely.\n\nBy establishing clear logical frameworks and robust Monitoring & Evaluation (M&E) systems, RBM ensures that every activity ties back to a strategic objective. In our recent consulting engagements across West Africa, implementing RBM frameworks has helped government agencies improve their service delivery metrics by establishing clear accountability loops and data-driven feedback mechanisms.",
+    content: "For decades, many organizations measured success by how much they di - ow many meetings were held, how many reports were generate - ather than what they achieved. Results-Based Management (RBM) flips this script entirely.\n\nBy establishing clear logical frameworks and robust Monitoring & Evaluation (M&E) systems, RBM ensures that every activity ties back to a strategic objective. In our recent consulting engagements across West Africa, implementing RBM frameworks has helped government agencies improve their service delivery metrics by establishing clear accountability loops and data-driven feedback mechanisms.",
     date: "May 28, 2026",
     category: "Methodology",
     imageUrl: "https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782506744/IMG_7489_da2zgv.heic"

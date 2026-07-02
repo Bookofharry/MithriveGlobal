@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   },
   title: {
     template: '%s | Mithrive Global Limited',
-    default: 'Mithrive Global Limited — Consulting & Capacity Development Firm Nigeria | Institutional Strengthening Africa',
+    default: 'Mithrive Global Limited - Consulting & Capacity Development Firm Nigeria | Institutional Strengthening Africa',
   },
-  description: "Mithrive Global Limited — Performance-focused consulting and capacity development firm. Organizational development, results-based management, M&E, GIS & geospatial analytics. Strengthening institutions across Nigeria and Africa.",
+  description: "Mithrive Global Limited - Performance-focused consulting and capacity development firm. Organizational development, results-based management, M&E, GIS & geospatial analytics. Strengthening institutions across Nigeria and Africa.",
   keywords: [
     // Brand
     "Mithrive Global", "Mithrive Global Limited", "Mithrive consulting", "Mithrive Abuja",
-    // Core services — blended with Abuja & northern states
+    // Core services - blended with Abuja & northern states
     "consulting firm Nigeria", "consulting firm Abuja", "consulting firm Kano",
     "management consulting Africa", "management consulting Abuja", "management consulting northern Nigeria",
     "capacity development Africa", "capacity development Abuja", "capacity building Nigeria",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "government consulting Nigeria", "government consulting Abuja", "public sector consulting Africa",
     "NGO consulting Nigeria", "NGO consulting Abuja", "development consulting Africa",
     "donor-funded project consulting", "development agency consulting Abuja",
-    // Geographic — Abuja & northern states
+    // Geographic - Abuja & northern states
     "consulting firm Abuja Nigeria", "consulting firm FCT", "management consulting firm West Africa",
     "consulting firm Kaduna", "consulting firm Nasarawa", "consulting firm Niger state",
     "consulting firm Plateau", "consulting firm Maiduguri", "consulting firm Borno",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     "international trainings and conferences", "international trainings and events",
   ],
   openGraph: {
-    title: 'Mithrive Global Limited — Consulting & Capacity Development',
+    title: 'Mithrive Global Limited - Consulting & Capacity Development',
     description: 'Performance-focused consulting firm specializing in organizational development, results-based management, M&E, and GIS analytics. Strengthening institutions across Nigeria and Africa.',
     url: 'https://mithriveglobal.com',
     siteName: 'Mithrive Global Limited',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mithrive Global Limited — Consulting & Capacity Development',
+    title: 'Mithrive Global Limited - Consulting & Capacity Development',
     description: 'Performance-focused consulting firm. Organizational development, RBM, M&E, GIS analytics across Nigeria & Africa.',
   },
   robots: {

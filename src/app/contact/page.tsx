@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Get in Touch Abuja Nigeria",
+  title: "Contact Us - Get in Touch Abuja Nigeria",
   description: "Reach Mithrive Global at Enterprise Technology Center, Abuja. Partner with us for organizational development, M&E, and institutional consulting.",
   alternates: {
     canonical: "https://mithriveglobal.com/contact",
   },
   openGraph: {
-    title: "Contact Mithrive Global — Abuja, Nigeria",
+    title: "Contact Mithrive Global - Abuja, Nigeria",
     description: "Get in touch to learn how Mithrive Global can help strengthen your institution. Office in Abuja, Nigeria.",
     url: "https://mithriveglobal.com/contact",
   },

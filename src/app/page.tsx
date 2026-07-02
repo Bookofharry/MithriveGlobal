@@ -12,12 +12,12 @@ import { courses } from "@/data/courses";
 
 export const metadata: Metadata = {
   title: "Consulting & Capacity Development Firm Nigeria | Institutional Strengthening Africa",
-  description: "Mithrive Global — performance-focused consulting firm. Organizational development, RBM, M&E, GIS analytics. Strengthening institutions across Nigeria & Africa.",
+  description: "Mithrive Global - performance-focused consulting firm. Organizational development, RBM, M&E, GIS analytics. Strengthening institutions across Nigeria & Africa.",
   alternates: {
     canonical: "https://mithriveglobal.com",
   },
   openGraph: {
-    title: "Mithrive Global — Engineering Growth. Strengthening Systems.",
+    title: "Mithrive Global - Engineering Growth. Strengthening Systems.",
     description: "Performance-focused consulting and capacity development firm operating across Africa. We help organizations transition from potential to performance.",
     url: "https://mithriveglobal.com",
   },

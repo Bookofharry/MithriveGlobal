@@ -3,13 +3,13 @@ import Hero from "@/components/Hero";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "About Us — Institutional Strengthening Firm",
+  title: "About Us - Institutional Strengthening Firm",
   description: "Learn about Mithrive Global's mission to eliminate the Execution Gap. Performance consulting, capacity development & systems optimization across Africa.",
   alternates: {
     canonical: "https://mithriveglobal.com/about",
   },
   openGraph: {
-    title: "About Mithrive Global — Institutional Strengthening Firm",
+    title: "About Mithrive Global - Institutional Strengthening Firm",
     description: "Performance consulting, capacity development & systems optimization. Eliminating the Execution Gap across institutions in Nigeria and Africa.",
     url: "https://mithriveglobal.com/about",
   },
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "How does Mithrive Global help institutions perform better?",
-    answer: "Mithrive Global applies a comprehensive, evidence-based approach combining organizational development, results-based management, and data intelligence. Through our proprietary 6-Step Mithrive Path — Diagnose, Analyze, Redesign, Align, Deploy, Measure — we engineer systems that transition organizations from potential to performance."
+    answer: "Mithrive Global applies a comprehensive, evidence-based approach combining organizational development, results-based management, and data intelligence. Through our proprietary 6-Step Mithrive Path - Diagnose, Analyze, Redesign, Align, Deploy, Measure - we engineer systems that transition organizations from potential to performance."
   },
   {
     question: "Where does Mithrive Global operate?",
@@ -73,7 +73,7 @@ export default function About() {
                 Mithrive Global is a performance-focused consulting and capacity development firm committed to strengthening institutions, optimizing systems, and delivering measurable development impact across Africa. 
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                The firm helps organizations transition from potential to performance, building institutions that work — not just exist. We believe that growth should be engineered, not accidental.
+                The firm helps organizations transition from potential to performance, building institutions that work - not just exist. We believe that growth should be engineered, not accidental.
               </p>
             </div>
             <div className="bg-gray-50 p-10 rounded-2xl border border-gray-100 shadow-sm">
@@ -97,7 +97,7 @@ export default function About() {
       <section className="py-24 bg-brand-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6">The Problem We Solve — The Execution Gap</h2>
+            <h2 className="text-3xl font-bold mb-6">The Problem We Solve - The Execution Gap</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Across Africa, organizations fail to scale not due to a lack of vision, but due to structural friction. The gap between funding and impact is driven by three recurring problems:
             </p>

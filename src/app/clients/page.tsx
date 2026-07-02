@@ -2,13 +2,13 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Clients — Public & Private Sector Nigeria",
+  title: "Our Clients - Public & Private Sector Nigeria",
   description: "24+ institutions served: CBN, NLNG, FIRS, BUA Cement, ICPC, NIRSAL & more. Trusted by Nigeria's leading public and private sector organizations.",
   alternates: {
     canonical: "https://mithriveglobal.com/clients",
   },
   openGraph: {
-    title: "Our Clients — Public & Private Sector Institutions Nigeria",
+    title: "Our Clients - Public & Private Sector Institutions Nigeria",
     description: "A diverse portfolio of 24+ public and private sector institutions served across Nigeria and beyond.",
     url: "https://mithriveglobal.com/clients",
   },

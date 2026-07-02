@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "The Mithrive Path — 6-Step Performance Blueprint",
+  title: "The Mithrive Path - 6-Step Performance Blueprint",
   description: "Our proven 6-step methodology: Diagnose, Analyze, Redesign, Align, Deploy, Measure. Engineering institutional growth through systems strengthening.",
   alternates: {
     canonical: "https://mithriveglobal.com/path",
   },
   openGraph: {
-    title: "The Mithrive Path — 6-Step Performance Blueprint",
+    title: "The Mithrive Path - 6-Step Performance Blueprint",
     description: "A proven 6-step blueprint for engineering growth and strengthening systems across institutions in Nigeria and Africa.",
     url: "https://mithriveglobal.com/path",
   },
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: "How does the Performance Blueprint work?",
-    answer: "The Performance Blueprint is Mithrive Global's proven methodology for transitioning organizations from potential to performance. It follows six sequential phases — Diagnose, Analyze, Redesign, Align, Deploy, and Measure — each building on the previous to create a comprehensive, sustainable transformation framework."
+    answer: "The Performance Blueprint is Mithrive Global's proven methodology for transitioning organizations from potential to performance. It follows six sequential phases - Diagnose, Analyze, Redesign, Align, Deploy, and Measure - each building on the previous to create a comprehensive, sustainable transformation framework."
   },
   {
     question: "What is a 6-step strategic intervention?",
@@ -75,7 +75,7 @@ export default function Path() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HowTo",
-            name: "The Mithrive Path — How to Strengthen Institutional Performance",
+            name: "The Mithrive Path - How to Strengthen Institutional Performance",
             description: "A 6-step blueprint for engineering growth and strengthening systems across institutions in Nigeria and Africa.",
             step: steps.map((step, idx) => ({
               "@type": "HowToStep",

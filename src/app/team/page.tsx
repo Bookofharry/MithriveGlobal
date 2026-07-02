@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Our Team — Expert Consultants Nigeria & Africa",
+  title: "Our Team - Expert Consultants Nigeria & Africa",
   description: "Harvard-trained, SURCON, ICAN, Oracle & Google certified experts driving institutional performance and systems strengthening across Africa.",
   alternates: {
     canonical: "https://mithriveglobal.com/team",
   },
   openGraph: {
-    title: "Our Team — Expert Consultants Across Nigeria & Africa",
+    title: "Our Team - Expert Consultants Across Nigeria & Africa",
     description: "Meet the experts driving institutional performance: Harvard-trained, PhD, SURCON, ICAN certified professionals strengthening systems across Africa.",
     url: "https://mithriveglobal.com/team",
   },

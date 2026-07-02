@@ -2,13 +2,13 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Work — Case Studies & Project Impact",
+  title: "Our Work - Case Studies & Project Impact",
   description: "Project highlights: JDPI Maiduguri, Financial Reporting Council of Nigeria, Kano State Ministry. Measurable development impact across Nigeria.",
   alternates: {
     canonical: "https://mithriveglobal.com/work",
   },
   openGraph: {
-    title: "Our Work — Case Studies & Measurable Impact",
+    title: "Our Work - Case Studies & Measurable Impact",
     description: "Driving transformative change across public and private sectors. Case studies from JDPI Maiduguri, Financial Reporting Council, and more.",
     url: "https://mithriveglobal.com/work",
   },

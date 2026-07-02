@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     question: "How does Mithrive Global differ from other consulting firms in Nigeria?",
-    answer: "Mithrive Global is uniquely positioned as a performance-focused firm that combines organizational development, results-based management, and data intelligence into a single integrated approach. Our proprietary frameworks — the Execution Gap analysis and the 6-Step Mithrive Path — are designed specifically for African institutional contexts, backed by Harvard-trained, SURCON and ICAN certified experts."
+    answer: "Mithrive Global is uniquely positioned as a performance-focused firm that combines organizational development, results-based management, and data intelligence into a single integrated approach. Our proprietary frameworks - the Execution Gap analysis and the 6-Step Mithrive Path - are designed specifically for African institutional contexts, backed by Harvard-trained, SURCON and ICAN certified experts."
   }
 ];
 

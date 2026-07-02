@@ -68,7 +68,7 @@ export default function ServiceTabs({ services }: { services: ServiceData[] }) {
                 <ul className="space-y-4">
                   {activeService.outcomes.map((outcome, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-brand-lime mr-3 mt-1">—</span>
+                      <span className="text-brand-lime mr-3 mt-1">-</span>
                       <span className="text-gray-200 leading-relaxed">{outcome}</span>
                     </li>
                   ))}

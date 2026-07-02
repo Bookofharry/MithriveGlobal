@@ -3,13 +3,13 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Social Impact — Community Development Nigeria",
+  title: "Social Impact - Community Development Nigeria",
   description: "Mithrive Initiative for Development and Smart Climate Innovation. Empowering communities and fostering sustainable growth across Nigeria.",
   alternates: {
     canonical: "https://mithriveglobal.com/social-impact",
   },
   openGraph: {
-    title: "Social Impact — Community Development & Climate Innovation",
+    title: "Social Impact - Community Development & Climate Innovation",
     description: "Empowering communities through the Mithrive Initiative for Development and Smart Climate Innovation across Nigeria.",
     url: "https://mithriveglobal.com/social-impact",
   },

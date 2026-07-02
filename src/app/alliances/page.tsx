@@ -2,13 +2,13 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Strategic Alliances — Consulting Partners Africa",
+  title: "Strategic Alliances - Consulting Partners Africa",
   description: "Collaborating with Capacity for Africa, GoldStead Resources, Art-Thez & Learnway Africa to scale institutional impact across the continent.",
   alternates: {
     canonical: "https://mithriveglobal.com/alliances",
   },
   openGraph: {
-    title: "Strategic Alliances — Consulting Partners Africa",
+    title: "Strategic Alliances - Consulting Partners Africa",
     description: "Collaborating with industry leaders to scale impact and deliver comprehensive institutional solutions across Africa.",
     url: "https://mithriveglobal.com/alliances",
   },
