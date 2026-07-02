@@ -13,6 +13,16 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Mithrive Path", href: "/path" },
+    { 
+      name: "Courses", 
+      href: "/courses",
+      subLinks: [
+        { name: "View All Courses", href: "/courses" },
+        { name: "Leadership", href: "/courses?category=Leadership" },
+        { name: "Data & Analytics", href: "/courses?category=Data" },
+        { name: "Strategy & Governance", href: "/courses?category=Strategy" }
+      ]
+    },
     { name: "Our Work", href: "/work" },
     { name: "Publications", href: "/publications" },
     { name: "Clients", href: "/clients" },
@@ -33,15 +43,42 @@ export default function Navbar() {
           
           <div className="hidden lg:flex lg:items-center lg:space-x-6">
             {links.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-brand-lime ${
-                  pathname === link.href ? "text-brand-lime" : "text-brand-navy"
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.subLinks ? (
+                <div key={link.name} className="relative group py-6">
+                  <Link 
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors hover:text-brand-lime flex items-center ${pathname.startsWith(link.href) ? "text-brand-lime" : "text-brand-navy"}`}
+                  >
+                    {link.name}
+                    <svg className="w-4 h-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </Link>
+                  <div className="absolute left-0 top-full -mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+                    <div className="py-2" role="menu">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          href={subLink.href}
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-lime transition-colors"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-brand-lime ${
+                    pathname === link.href ? "text-brand-lime" : "text-brand-navy"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -64,21 +101,49 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-white shadow-xl absolute w-full">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="lg:hidden bg-white shadow-xl absolute w-full max-h-screen overflow-y-auto">
+          <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3">
             {links.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === link.href 
-                    ? "text-brand-lime bg-brand-navy/5" 
-                    : "text-brand-navy hover:text-brand-lime hover:bg-gray-50"
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.subLinks ? (
+                <div key={link.name} className="space-y-1 mb-2">
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${
+                      pathname.startsWith(link.href) 
+                        ? "text-brand-lime bg-brand-navy/5" 
+                        : "text-brand-navy hover:text-brand-lime hover:bg-gray-50"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                  <div className="pl-6 space-y-1">
+                    {link.subLinks.map((subLink) => (
+                      <Link
+                        key={subLink.name}
+                        href={subLink.href}
+                        onClick={() => setIsOpen(false)}
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-brand-lime hover:bg-gray-50"
+                      >
+                        {subLink.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    pathname === link.href 
+                      ? "text-brand-lime bg-brand-navy/5" 
+                      : "text-brand-navy hover:text-brand-lime hover:bg-gray-50"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
         </div>
