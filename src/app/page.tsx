@@ -4,6 +4,11 @@ import Card from "@/components/Card";
 import ClientLogoGrid from "@/components/ClientLogoGrid";
 import LatestPublications from "@/components/LatestPublications";
 import OurInfluence from "@/components/OurInfluence";
+import Testimonials from "@/components/Testimonials";
+import BrochureDownloadCTA from "@/components/BrochureDownloadCTA";
+import Link from "next/link";
+import Image from "next/image";
+import { courses } from "@/data/courses";
 
 export const metadata: Metadata = {
   title: "Consulting & Capacity Development Firm Nigeria | Institutional Strengthening Africa",
@@ -17,7 +22,6 @@ export const metadata: Metadata = {
     url: "https://mithriveglobal.com",
   },
 };
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,7 +31,12 @@ export default function Home() {
         subtitle="Mithrive Global is a performance-focused consulting and capacity development firm operating across Africa. We help organizations transition from potential to performance."
         primaryCta={{ label: "Learn More", href: "/about" }}
         secondaryCta={{ label: "Contact Us", href: "/contact" }}
-        backgroundImage="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/v1782505127/IMG_2912_oeeht0.heic"
+        images={[
+          "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019430/geralt-business-10234773_1920_xczn7o.jpg",
+          "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019447/IMG_3854_t3bpwo.heic",
+          "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019428/Capacity_building_ctvxad.png",
+          "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1783019427/geralt-adults-3984852_1920_zi3pxa.jpg"
+        ]}
       />
 
       {/* About Snippet */}
@@ -43,8 +52,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Featured Courses */}
       <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl font-bold text-brand-navy">Upcoming Courses</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Browse our upcoming capacity-building programs and register online for virtual or in-person attendance.
+              </p>
+            </div>
+            <Link 
+              href="/courses" 
+              className="inline-flex items-center text-brand-navy font-semibold hover:text-brand-lime transition-colors whitespace-nowrap"
+            >
+              View all courses
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {courses.slice(0, 3).map((course) => (
+              <div key={course.id} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col group">
+                <div className="relative h-56 w-full overflow-hidden bg-brand-navy">
+                  <Image 
+                    src={course.imageUrl} 
+                    alt={course.title} 
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  />
+                  <div className="absolute top-4 right-4 bg-brand-lime text-brand-navy text-xs font-bold px-3 py-1 rounded-full shadow">
+                    {course.mode}
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                    {course.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-brand-navy mb-3 line-clamp-2">
+                    {course.title}
+                  </h3>
+                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                    <span className="flex items-center">
+                      <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      {course.date}
+                    </span>
+                  </div>
+                  <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                    <span className="font-bold text-brand-navy">{course.price}</span>
+                    <Link 
+                      href={`/courses/${course.slug}`}
+                      className="text-brand-lime bg-brand-navy hover:bg-opacity-90 px-5 py-2 rounded font-medium transition-colors text-sm"
+                    >
+                      Register Now
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-brand-navy">Our Service Portfolio</h2>
@@ -89,6 +164,10 @@ export default function Home() {
       </section>
 
       <OurInfluence />
+      
+      <Testimonials />
+      <BrochureDownloadCTA />
+
       <LatestPublications />
 
       {/* Clients Section */}

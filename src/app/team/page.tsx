@@ -60,38 +60,6 @@ const coreTeam = [
   }
 ];
 
-const globalFacilitators: { name: string; credentials: string; expertise: string; image?: string }[] = [
-  {
-    name: "Mrs. Rosemary Okonkwo",
-    credentials: "HR systems & people operations.",
-    expertise: "Human capital management."
-  },
-  {
-    name: "Dr. Abubakar Rufai",
-    credentials: "PhD Tech Mgt | 17+ yrs | Oracle & Google Certified",
-    expertise: "Cloud Security lead for CBN & TAJ Bank. Bridges social statistics with cybersecurity."
-  },
-  {
-    name: "Dr. Ochotokpo Sylvanus",
-    credentials: "PhD | 15+ yrs in Education | Lecturer, NTI Centre Mgr",
-    expertise: "Academic management & institutional strengthening. Bridges educational theory and operational impact."
-  },
-  {
-    name: "Dr. Feyisayo Jegede",
-    credentials: "PhD Human Parasitology, BUK | MLS, FMLSCN",
-    expertise: "Deputy Director WRP-N, Ex-Family Health International. Public health & lab systems leader."
-  },
-  {
-    name: "Sunday Osafaron",
-    credentials: "M.Sc. | 15+ yrs | ICAN, NIM, NIPR, NOUN",
-    expertise: "Bridges academic rigor and industry execution for sustainable institutional excellence."
-  },
-  {
-    name: "Engr. Kazeem Abubakar (PhD)",
-    credentials: "PhD Malaysia | Registered Engineer | 13+ yrs",
-    expertise: "Operations Research specialist. Optimizes production systems and industrial innovation."
-  }
-];
 
 export default function Team() {
   return (
@@ -132,35 +100,6 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="py-24 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-brand-navy">Global Facilitators</h2>
-            <div className="w-24 h-1 bg-brand-lime mx-auto mt-6"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {globalFacilitators.map((fac, idx) => (
-              <div key={idx} className="flex flex-col sm:flex-row bg-gray-50 rounded-xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
-                {fac.image ? (
-                  <div className="sm:w-1/3 min-h-[200px] relative bg-gray-50 border-r border-gray-100">
-                    <Image src={fac.image} alt={fac.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                ) : (
-                  <div className="sm:w-1/3 bg-gray-50 min-h-[200px] relative flex items-center justify-center border-r border-gray-100">
-                    <Image src="https://res.cloudinary.com/dtxtk0u9u/image/upload/f_auto,q_auto/IMG_8180_kcusgx" alt="Mithrive Global Logo" fill className="object-contain p-6 opacity-20" />
-                  </div>
-                )}
-                <div className="sm:w-2/3 p-6 flex flex-col justify-center">
-                  <h3 className="text-lg font-bold text-brand-navy mb-2">{fac.name}</h3>
-                  <p className="text-xs text-brand-lime font-semibold uppercase tracking-wider mb-3">{fac.credentials}</p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{fac.expertise}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

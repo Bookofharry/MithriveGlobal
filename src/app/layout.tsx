@@ -104,6 +104,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import BrandedLoader from "@/components/BrandedLoader";
+import LeadGenModal from "@/components/LeadGenModal";
 
 export default function RootLayout({
   children,
@@ -149,6 +150,7 @@ export default function RootLayout({
             })
           }}
         />
+        <LeadGenModal />
         <BrandedLoader />
         <Navbar />
         <main className="flex-grow">
