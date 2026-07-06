@@ -19,7 +19,7 @@ export default function Navbar() {
       href: "/courses",
       subLinks: [
         { name: "View All Courses", href: "/courses" },
-        { name: "Human Capital & Mgmt", href: "/courses?category=Human%20Capital%20%26%20Management" },
+        { name: "Human Capital & Management", href: "/courses?category=Human%20Capital%20%26%20Management" },
         { name: "Business & Finance", href: "/courses?category=Business%20%26%20Finance" },
         { name: "Tech & AI", href: "/courses?category=Technology%20%26%20AI" },
         { name: "Executive Leadership", href: "/courses?category=Executive%20Leadership" },
