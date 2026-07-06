@@ -45,7 +45,7 @@ export default function LeadGenModal() {
           {step === 1 && (
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-gray-800 text-center mb-6">What area are you most interested in?</h3>
-              {["Strategic Leadership", "Data & Analytics", "Results-Based Management"].map((category) => (
+              {["Executive Leadership", "Technology & AI", "Development"].map((category) => (
                 <button
                   key={category}
                   onClick={() => setStep(2)}
@@ -66,12 +66,12 @@ export default function LeadGenModal() {
               <input 
                 type="text" 
                 placeholder="Full Name"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-lime outline-none"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-900 focus:ring-2 focus:ring-brand-lime outline-none"
               />
               <input 
                 type="email" 
                 placeholder="Email Address"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-lime outline-none"
+                className="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-900 focus:ring-2 focus:ring-brand-lime outline-none"
               />
               <button 
                 onClick={() => {

@@ -63,7 +63,7 @@ export default function ContactForm() {
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
               placeholder="John Doe"
               required
             />
@@ -74,7 +74,7 @@ export default function ContactForm() {
               type="text"
               id="organization"
               name="organization"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
               placeholder="Your Company"
             />
           </div>
@@ -84,7 +84,7 @@ export default function ContactForm() {
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
               placeholder="john@example.com"
               required
             />
@@ -95,7 +95,7 @@ export default function ContactForm() {
               id="message"
               name="message"
               rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all resize-none"
               placeholder="How can we help you?"
               required
             ></textarea>

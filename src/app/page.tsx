@@ -74,7 +74,19 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {courses.slice(0, 3).map((course) => (
+            {[...courses]
+              .sort((a, b) => {
+                // Parse "Month DD - Month DD, YYYY" format to a sortable date
+                const parseDate = (dateStr: string) => {
+                  const parts = dateStr.split(',');
+                  const year = parts[1]?.trim() || new Date().getFullYear();
+                  const startPart = parts[0].split('-')[0].trim(); // e.g. "August 15"
+                  return new Date(`${startPart} ${year}`).getTime();
+                };
+                return parseDate(b.date) - parseDate(a.date); // Sort by newest (farthest in future) first
+              })
+              .slice(0, 6)
+              .map((course) => (
               <div key={course.id} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col group">
                 <div className="relative h-56 w-full overflow-hidden bg-brand-navy">
                   <Image 

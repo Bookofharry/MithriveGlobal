@@ -10,6 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const links = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Mithrive Path", href: "/path" },
@@ -18,9 +19,11 @@ export default function Navbar() {
       href: "/courses",
       subLinks: [
         { name: "View All Courses", href: "/courses" },
-        { name: "Leadership", href: "/courses?category=Leadership" },
-        { name: "Data & Analytics", href: "/courses?category=Data" },
-        { name: "Strategy & Governance", href: "/courses?category=Strategy" }
+        { name: "Human Capital & Mgmt", href: "/courses?category=Human%20Capital%20%26%20Management" },
+        { name: "Business & Finance", href: "/courses?category=Business%20%26%20Finance" },
+        { name: "Tech & AI", href: "/courses?category=Technology%20%26%20AI" },
+        { name: "Executive Leadership", href: "/courses?category=Executive%20Leadership" },
+        { name: "Development", href: "/courses?category=Development" }
       ]
     },
     { name: "Our Work", href: "/work" },
