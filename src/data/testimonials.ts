@@ -13,27 +13,25 @@ export const testimonials: Testimonial[] = [
   {
     id: "1",
     type: "text",
-    author: "Aisha Mohammed",
-    role: "Director of Operations",
-    company: "Federal Ministry of Health",
-    content: "Mithrive Global completely transformed our approach to M&E. Their Results-Based Management training gave our team the exact tools needed to track impact, not just output."
+    author: "Representative",
+    role: "Team",
+    company: "JDPI Maiduguri",
+    content: "Working with Mithrive Global transformed the way we approached our Household Economic Strengthening (HES) programme. We were struggling with weak implementation structures, inconsistent beneficiary profiling, and limited ability to measure impact. Their team didn’t just deliver training, they helped us strengthen our capacity, standardize our tools, and establish a more data-driven system for planning and monitoring. Today, we are making better-targeted interventions, tracking meaningful outcomes with confidence, and seeing stronger resilience across the households we serve. Their professionalism and practical approach have left a lasting impact on our work."
   },
   {
     id: "2",
-    type: "video",
-    author: "Oluwaseun Adeyemi",
-    role: "Head of Strategy",
-    company: "NIRSAL PLC",
-    content: "The Strategic Leadership course was an eye-opener. The facilitation was top-notch.",
-    videoThumbnail: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782559312/IMG_1893_yssgye.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    type: "text",
+    author: "Ms. Flora",
+    role: "Legal Support",
+    company: "Financial Reporting Council of Nigeria",
+    content: "Mithrive Global provided more than a governance training, they helped us strengthen the way our leadership works together. At a time when leadership alignment and accountability frameworks required significant improvement, they designed and facilitated practical governance interventions that synchronized our leadership team around shared objectives and execution standards. The result has been improved collaboration, clearer accountability, stronger ownership of strategic initiatives, and enhanced compliance across the organization. Their ability to translate governance principles into practical organizational outcomes is truly commendable."
   },
   {
     id: "3",
     type: "text",
-    author: "Dr. Ibrahim Sani",
-    role: "Executive Secretary",
-    company: "State Primary Healthcare Board",
-    content: "Their capacity building courses are unmatched in Nigeria. We sent 50 staff members for the Data Intelligence cohort and the ROI was immediate in our Q3 reporting."
+    author: "Haj. Hadiza",
+    role: "Special Adviser to the Governor on Land Matters",
+    company: "Kano State Government",
+    content: "“Our vision for smarter urban development required stronger integration of geospatial intelligence into planning and decision-making. Mithrive Global delivered an insightful and highly contextualized programme that simplified Smart City concepts while demonstrating how spatial data can drive evidence-based planning and sustainable wealth creation. The sessions significantly enhanced institutional understanding of geospatial strategy and equipped participants with practical perspectives for shaping smarter, data-driven urban development. Their expertise and ability to connect technical concepts with policy and governance realities were exceptional.”"
   }
 ];
