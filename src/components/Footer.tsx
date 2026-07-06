@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link href="/services" className="hover:text-brand-lime transition-colors">Our Services</Link></li>
               <li><Link href="/path" className="hover:text-brand-lime transition-colors">The Mithrive Path</Link></li>
-              <li><Link href="/work" className="hover:text-brand-lime transition-colors">Our Work</Link></li>
+              <li><Link href="/product" className="hover:text-brand-lime transition-colors">Our Product</Link></li>
               <li><Link href="/clients" className="hover:text-brand-lime transition-colors">Clients Served</Link></li>
               <li><Link href="/contact" className="hover:text-brand-lime transition-colors">Contact Us</Link></li>
             </ul>

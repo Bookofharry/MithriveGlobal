@@ -26,7 +26,7 @@ export default function Navbar() {
         { name: "Development", href: "/courses?category=Development" }
       ]
     },
-    { name: "Our Work", href: "/work" },
+    { name: "Our Product", href: "/product" },
     { name: "Publications", href: "/publications" },
     { name: "Clients", href: "/clients" },
     { name: "Social Impact", href: "/social-impact" },
