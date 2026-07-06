@@ -105,6 +105,7 @@ import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 import BrandedLoader from "@/components/BrandedLoader";
 import LeadGenModal from "@/components/LeadGenModal";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function RootLayout({
   children,
@@ -158,6 +159,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <WhatsAppWidget />
       </body>
     </html>
   );

@@ -1,0 +1,95 @@
+"use client";
+
+import { useState } from "react";
+import { MessageCircle, X, Send } from "lucide-react";
+
+interface WhatsAppWidgetProps {
+  phoneNumber?: string;
+  greetingMessage?: string;
+  companyName?: string;
+}
+
+export default function WhatsAppWidget({
+  phoneNumber = "2348106310387", // formatting for wa.me
+  greetingMessage = "Hi there! 👋\n\nHow can we help you today?",
+  companyName = "Customer Support",
+}: WhatsAppWidgetProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Clean the phone number for wa.me link (remove spaces/pluses)
+  const cleanPhone = phoneNumber.replace(/[^0-9]/g, "");
+  const waLink = `https://wa.me/${cleanPhone}`;
+
+  return (
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
+      {/* Chat Window */}
+      <div 
+        className={`mb-4 w-[350px] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 origin-bottom-right ${
+          isOpen ? "scale-100 opacity-100 translate-y-0" : "scale-90 opacity-0 translate-y-8 pointer-events-none"
+        }`}
+      >
+        {/* Header */}
+        <div className="bg-[#128C7E] p-4 flex items-center justify-between text-white">
+          <div className="flex items-center gap-3">
+            <div className="relative w-10 h-10 rounded-full bg-white/20 overflow-hidden flex-shrink-0">
+              {/* Placeholder Avatar */}
+              <div className="absolute inset-0 flex items-center justify-center text-white/70">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold text-sm">{companyName}</h3>
+              <p className="text-xs text-green-100">Typically replies in minutes</p>
+            </div>
+          </div>
+          <button 
+            onClick={() => setIsOpen(false)}
+            className="p-2 hover:bg-white/10 rounded-full transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Body */}
+        <div 
+          className="p-5 h-64 overflow-y-auto bg-[#ECE5DD] relative"
+        >
+          {/* Subtle background pattern (using CSS) */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "radial-gradient(#000 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
+          
+          <div className="bg-white text-gray-800 p-3 rounded-xl rounded-tl-sm shadow-sm max-w-[85%] text-sm whitespace-pre-wrap leading-relaxed inline-block relative z-10">
+            {greetingMessage}
+            <span className="block text-[10px] text-gray-400 mt-1 text-right">Just now</span>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="p-4 bg-white border-t border-gray-100 relative z-10">
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-3 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-xl transition-colors shadow-sm"
+          >
+            <Send className="w-4 h-4" />
+            Start Chat
+          </a>
+        </div>
+      </div>
+
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-16 h-16 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300/50"
+      >
+        {isOpen ? (
+          <X className="w-7 h-7" />
+        ) : (
+          <MessageCircle className="w-8 h-8" />
+        )}
+      </button>
+    </div>
+  );
+}
