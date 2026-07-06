@@ -26,10 +26,16 @@ export default function Navbar() {
         { name: "Development", href: "/courses?category=Development" }
       ]
     },
-    { name: "Our Product", href: "/product" },
-    { name: "Publications", href: "/publications" },
-    { name: "Clients", href: "/clients" },
-    { name: "Social Impact", href: "/social-impact" },
+    { 
+      name: "Our Impact", 
+      href: "#",
+      subLinks: [
+        { name: "Our Product", href: "/product" },
+        { name: "Publications", href: "/publications" },
+        { name: "Clients", href: "/clients" },
+        { name: "Social Works", href: "/social-impact" }
+      ]
+    },
     { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ];
