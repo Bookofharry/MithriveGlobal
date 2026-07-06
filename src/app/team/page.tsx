@@ -35,7 +35,7 @@ const coreTeam = [
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782558393/image20_murzsu.jpg"
   },
   {
-    name: "Dr. Tejaswini Hiremath",
+    name: "Tejaswini Hiremath",
     role: "Technical Expert",
     bio: "Mrs. Tejaswini serves as the Program Technical Expert at Mithrive Global Ltd, providing strategic technical guidance and advisory support for the organization's social impact and development initiatives. With over 20 years of experience across the international development sector in Asia and Europe, she brings extensive expertise in program design, technical assistance, stakeholder engagement, and capacity development. Her global perspective and deep understanding of development programming strengthen Mithrive Global Ltd's ability to deliver sustainable, evidence-based interventions. Mrs. Tejaswini is recognized for her commitment to advancing inclusive development, fostering strategic partnerships, and supporting programs that create lasting social and institutional impact across diverse communities.",
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556608/image25_if8qsm.jpg"
