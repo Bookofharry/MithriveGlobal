@@ -47,7 +47,7 @@ const coreTeam = [
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556565/image17_fvsttx.jpg"
   },
   {
-    name: "Mrs. Fatima Binta M.",
+    name: "Fatima Binta M.",
     role: "Head, Finance & Business Operations",
     bio: "Fatima Binta M. is the Head of Finance & Business Operations at Mithrive Global Ltd, where she provides strategic leadership in financial management, business operations, and organizational efficiency. Since joining the firm, she has played a vital role in strengthening operational systems and supporting sustainable business growth. Prior to Mithrive Global Ltd, she built several years of professional experience across the banking and telecommunications sectors, developing expertise in financial operations, customer relationship management, process improvement, and business administration. She is recognized for her analytical approach, operational discipline, and commitment to driving financial excellence and organizational performance.",
     image: "https://res.cloudinary.com/dtxtk0u9u/image/upload/v1782556665/image28_kcops5.jpg"
