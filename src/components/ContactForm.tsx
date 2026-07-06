@@ -13,9 +13,7 @@ export default function ContactForm() {
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
     try {
@@ -79,17 +77,7 @@ export default function ContactForm() {
               placeholder="+234 800 000 0000"
             />
           </div>
-          <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
-              placeholder="How can we help?"
-              required
-            />
-          </div>
+
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
             <input
@@ -101,17 +89,7 @@ export default function ContactForm() {
               required
             />
           </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all resize-none"
-              placeholder="How can we help you?"
-              required
-            ></textarea>
-          </div>
+
 
           {status === "error" && (
             <p className="text-red-600 text-sm font-medium">Something went wrong. Please try again or email us directly.</p>
