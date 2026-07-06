@@ -12,7 +12,8 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      organization: (form.elements.namedItem("organization") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
@@ -69,13 +70,24 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">Organization</label>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
+              placeholder="+234 800 000 0000"
+            />
+          </div>
+          <div>
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
             <input
               type="text"
-              id="organization"
-              name="organization"
+              id="subject"
+              name="subject"
               className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:ring-2 focus:ring-brand-lime focus:border-brand-lime outline-none transition-all"
-              placeholder="Your Company"
+              placeholder="How can we help?"
+              required
             />
           </div>
           <div>
