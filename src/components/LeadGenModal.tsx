@@ -78,7 +78,7 @@ export default function LeadGenModal() {
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-brand-navy mb-2">Spot Reserved!</h3>
-              <p className="text-gray-600 mb-6">You're on the list. We'll be in touch with your resources shortly.</p>
+              <p className="text-gray-600 mb-6">You&apos;re on the list. We&apos;ll be in touch with your resources shortly.</p>
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-full py-3 bg-gray-100 text-gray-700 font-bold rounded-lg hover:bg-gray-200 transition-colors"
