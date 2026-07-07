@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   const links = [
@@ -115,29 +116,44 @@ export default function Navbar() {
             {links.map((link) => (
               link.subLinks ? (
                 <div key={link.name} className="space-y-1 mb-2">
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-3 py-2 rounded-md text-base font-medium ${
-                      pathname.startsWith(link.href) 
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenMobileDropdown(openMobileDropdown === link.name ? null : link.name);
+                    }}
+                    className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      pathname.startsWith(link.href) && link.href !== "#"
                         ? "text-brand-lime bg-brand-navy/5" 
                         : "text-brand-navy hover:text-brand-lime hover:bg-gray-50"
                     }`}
                   >
                     {link.name}
-                  </Link>
-                  <div className="pl-6 space-y-1">
-                    {link.subLinks.map((subLink) => (
-                      <Link
-                        key={subLink.name}
-                        href={subLink.href}
-                        onClick={() => setIsOpen(false)}
-                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-brand-lime hover:bg-gray-50"
-                      >
-                        {subLink.name}
-                      </Link>
-                    ))}
-                  </div>
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-200 ${openMobileDropdown === link.name ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {openMobileDropdown === link.name && (
+                    <div className="pl-6 space-y-1 animate-in slide-in-from-top-1 duration-200">
+                      {link.subLinks.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          href={subLink.href}
+                          onClick={() => {
+                            setIsOpen(false);
+                            setOpenMobileDropdown(null);
+                          }}
+                          className="block px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-brand-lime hover:bg-gray-50"
+                        >
+                          {subLink.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Link
