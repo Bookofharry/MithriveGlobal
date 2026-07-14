@@ -89,3 +89,7 @@ If you need to host this on a traditional Node.js server:
 - `src/app/layout.tsx` - The global layout containing the Navbar, Footer, and global SEO metadata.
 - `src/components/` - Reusable UI components like the `Hero`, `Card`, and `ClientLogoGrid`.
 - `next.config.mjs` - Next.js configuration. Currently configured to authorize `res.cloudinary.com` as a trusted remote image source.
+
+---
+
+Built by [dev harry](https://github.com/Bookofharry)

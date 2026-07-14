@@ -1,7 +1,8 @@
 {
-  "name": "temp-app",
+  "name": "mithriveGlobal",
   "version": "0.1.0",
   "private": true,
+  "author": "dev harry <https://github.com/Bookofharry>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
